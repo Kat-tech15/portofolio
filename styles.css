@@ -1,3 +1,7 @@
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,9 +11,9 @@ body {
 }
 
 header {
-    background-color: #524f38;
-    color: rgb(223, 166, 166);
-    padding: 20px 0;
+    background-color: #79f1eb;
+    color: rgb(0, 255, 98);
+    padding:4px;
 }
 
 nav ul {
@@ -23,7 +27,6 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(120, 211, 17);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.8s;
@@ -31,64 +34,29 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff3ba7;
+    color: #c4719e;
 }
 
-.home {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
-    background-color: #3ad353;
-}
-
-.home-text {
+.about-text {
     font-size: 3rem;
     font-weight: bold;
 }
 
-.home-text span {
+.about-text span {
     color: #d33a2f;
 }
 .about-text {
     font-size: 2rem;
     padding: 40px;
 }
-
-.home img {
-    width: 200px;
-    padding: 200px 0;
-    border-radius: 45%;
-
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
-
-#skills {
-    padding: 40px;
-    color: #374cc4;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.skill {
-    background-color: rgb(127, 188, 228);
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 23px;
-    color: white;
-    font-weight: bold;
-    width: 150px;
-    height: 100px;
-    text-align: center;
-}
-
-.cv-btn {
+.cv-btn{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -105,17 +73,95 @@ nav ul li a:hover {
     
 }
 
-footer {
-    background-color: #6fa4dd;
-    color: white;
-    padding: 10px;
-    margin-top: 30px;
+.skills {
+    padding: 50px;
+    color: #374cc4;
+    text-align: center;
+    background: #07e67e;
 }
-.contact-me{
-    padding: 50px 20px;
+.skills h2{
+    color: #7485e2;
+}
+.skills-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.skill {
+    background-color: rgb(127, 188, 228);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    flex: 20px 20px 20px;
+    white-space: nowrap;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.skill:hover{
+    transform: scale(1.1)
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    background-color: #caaeae;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Card Hover Effect */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Styles */
+  .card-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  /* Card Header Styles */
+  .card-header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Description Styles */
+  .card-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+.contact{
+    padding: 50px;
     text-align: flex;
     margin-top: 50px;
-    margin-bottom: 20px;
+    color: #3ad353;
+}
+.contact h2 {
+    color: #374cc4;
 }
 .contact-container{
     max-width: 600px;
@@ -146,6 +192,7 @@ footer {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #353641;
 
 }
 h1{
@@ -173,4 +220,41 @@ button{
 }
 button:hover{
     background-color: #3ad353;
+}
+footer {
+    background-color: #6fa4dd;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.footer-icons a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-icons a:hover{
+    transform: scale(1.3);
+    color: darkorchid;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: darkorchid;
+}
+.footer p {
+    font-size: 14;
 }
